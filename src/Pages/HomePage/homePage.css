@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Signika+Negative:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #eeeeee;
+}
+
+.anaResim {
+    position: relative;
+    margin: 30px 0 30px 0;
+    width: 100%; 
+    left: 0;
+}
+.anaResim img{
+    width: 100%; 
+    left: 0;
+}
+  
+.anaResim .urunKartBasligi {
+    display: flex;
+
+    position: absolute; 
+    background: none;
+    bottom: 70%; 
+    left: 1%;
+    width: 100%; 
+    padding: 20px; 
+    width: 35%;
+    border: none;
+    background: none;
+    
+    color: #fff;
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    
+    
+}
+.anaResim .urunKartAciklamasi {
+    display: flex;
+
+    position: absolute; 
+
+    bottom: 40%; 
+    left: 0;
+    width: 100%; 
+    padding: 20px; 
+    width: 35%;
+    border: none;
+    background: none;
+    
+    color: #fff;
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    
+    
+}
+.urunKartAciklamasi p{
+    font-size: 1.4em;
+
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none; 
+    transform: translateX(-20%);
+  }
+  
+.visible {
+    opacity: 1;
+    pointer-events: auto; 
+    transform: translateX(20%);
+    
+}
+
+.kartTitle{
+    font-size: 1.8em;
+    font-weight: 500;
+    transition: opacity 0.6s ease-in-out, transform 0.5s ease-in-out;
+}
+.card_Description {
+    transition: opacity 0.6s ease-in-out, transform 0.8s ease-in-out;
+}
+.scroll{
+    display: flex;
+
+    position: sticky;
+    z-index: 1000; 
+    bottom: 0;
+    left: 50%;
+    background-color: #d40000;
+    padding: 18px;
+    border-radius: 50%;
+    animation: bounce 0.7s infinite ease-in-out; /* Animasyonu tanımla */
+    color: #fff;
+}
+
+.visibleScroll{
+    opacity: 1;
+    animation: bounce 0.7s infinite ease-in-out;
+}
+.hiddenScroll{
+    animation: none;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Başlangıç ve bitiş konumu */
+    }
+    50% {
+        transform: translateY(-20px); /* Yukarı doğru hareket */
+    }
+}
+
+
+.featureContainer{
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    
+}
