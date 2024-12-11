@@ -1,0 +1,52 @@
+
+     [
+      {
+        "id": 1,
+        "resim" : "/images/A.jpg",
+        "title" : "B-One 'in sagladigi kuvvetler.",
+        "content": "B-one uygulandıktan 10 dk sonra (36 derecede) donma sürecini tamamlar. Torsiyonel kuvveti pasif yerleştirilen bir implantta dahi ters tork 50 nm'dir."
+      },
+      {
+        "id": 2,
+        "resim" : "/images/B.jpg",
+        "title": "Başlık 2",
+        "content": "B-one uygulandıktan 10 dk sonra (36 derecede) donma sürecini tamamlar. Torsiyonel kuvveti pasif yerleştirilen bir implantta dahi ters tork 50 nm'dir."
+      },
+      {
+        "id": 3,
+        "resim" : "/images/C.jpg",
+        "title": "Başlık 3",
+        "content": "Bu, üçüncü bölümün içeriğidir."
+      },
+      {
+        "id": 4,
+        "resim" : "/images/D.jpg",
+        "title": "Başlık 3",
+        "content": "Bu, üçüncü bölümün içeriğidir."
+      },
+      {
+        "id": 5,
+        "resim" : "/images/E.jpg",
+        "title": "Başlık 3",
+        "content": "Bu, üçüncü bölümün içeriğidir."
+      },
+      {
+        "id": 6,
+        "resim" : "/images/F.jpg",
+        "title": "Başlık 3",
+        "content": "Bu, üçüncü bölümün içeriğidir."
+      },
+      {
+        "id": 7,
+        "resim" : "/images/G.jpg",
+        "title": "Başlık 3",
+        "content": "Bu, üçüncü bölümün içeriğidir."
+      },
+      {
+        "id": 8,
+        "resim" : "/images/H.jpg",
+        "title": "Başlık 3",
+        "content": "Bu, üçüncü bölümün içeriğidir."
+      }
+    ]
+  
