@@ -1,26 +1,37 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./homePage.css";
-import flipData from './data.json';
+import flipData from "./data.json";
 import AnaResim from "./Grandus B-One (2).png";
 import { FaAngleDown } from "react-icons/fa";
 import igne from "../../Assets/igne111.jpg";
-
+import solIgne from "../../Assets/igneSagaBakan.png";
+import ilacKutusu from "../../Assets/ilacKutusu.jpg";
 import FlipCard from "../../Components/overlay/FlipCard";
+import DuyuruBox from "../../Components/duyuruBox/DuyuruBox";
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1) {
-        setIsVisible(true);
+      if (window.innerWidth <= 480) {
+        // Mobil cihazlar için
+        if (window.scrollY > 10) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
       } else {
-        setIsVisible(false);
+        // Masaüstü cihazlar için
+        if (window.scrollY > 1) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -55,51 +66,41 @@ const HomePage = () => {
       videoRef.current.pause(); // Video görünürlüğü kaybolunca durdurulur.
     }
   }, [isVideoVisible]);
+  const [isFlipMobile, setIsFlipMobile] = useState(false);
 
-  
+
+  useEffect(() => {
+    const checkMobile = () => setIsFlipMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   return (
     <>
       <div className="anaResim">
         <img src={AnaResim} alt="" />
-        <div className="urunKartBasligi">
-          <div className={`kartTitle ${isVisible ? "visible" : "hidden"}`}>
-            <h1>GRANDUS B-ONE</h1>
-          </div>
-        </div>
-        <div className="urunKartAciklamasi">
-          <div
-            className={`card_Description ${isVisible ? "visible" : "hidden"}`}
-          >
-            <p>
-              <strong>B-one</strong> tetra kalsiyum fosfat icerikli kemigi
-              kemige, kemigi metale 10dk kadar kisa bi surede yapistiran ve bunu
-              tamamen yerini kemige yani otojene birakana kadar bu mukavementini
-              kaybetmeyen bir (kalsiyum fosfat cimento) sentetik kemiktir.
-            </p>
-          </div>
+        <div className="first">
+          <img
+            src={ilacKutusu}
+            alt=""
+            className={`ilacKutu ${isVisible ? "hidden" : "visible"}`}
+          />
+          <h1>Grandus B-One </h1>
+          <h1>Nedir?</h1>
+          <p>
+            B-one, tetra kalsiyum fosfat icerikli kemigi kemige, kemigi metale
+            10dk kadar kisa bi surede yapistiran ve bunu tamamen yerini kemige
+            yani otojene birakana kadar bu mukavementini kaybetmeyen bir
+            (kalsiyum fosfat cimento) sentetik kemiktir.
+          </p>
         </div>
       </div>
-      <div className={`sagTaraf ${isVisible ? "visibleSag" : "hiddenSag"}`}>
-        <h2>Onemli Biseler</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ullam
-          officiis libero sed asperiores aspernatur?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ullam
-          officiis libero sed asperiores aspernatur?
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ullam
-          officiis libero sed asperiores aspernatur?
-        </p>
-      </div>
-      <FaAngleDown
-        className={`scroll ${isVisible ? "hiddenScroll" : "visiableScroll"}`}
-      />
+
       <div className="section1">
         <div className="sectionBox">
-          <div className="line"></div>
+          <div className="sectionImage">
+            <img src={igne} alt="" />
+          </div>
           <div className="sectionDescription">
             <h1>Grandus B-One Ne Ise Yarar</h1>
             <p>
@@ -122,54 +123,40 @@ const HomePage = () => {
               <strong>04.</strong> Yeni bir teknoloji kullanir
             </p>
           </div>
-          <div className="sectionImage">
-            <img src={igne} alt="" />
-          </div>
-          <div className="line"></div>
         </div>
       </div>
+      <h1 className="hakkinda">Grandus B-One Hakkında</h1>
       <div className="flipCard">
         <div className="cards-container">
-          {flipData.filter((_, index) => [0, 1, 4, 5 ].includes(index)).map((card) => (
-            <FlipCard className="card-between"
+         {isFlipMobile ? (
+            <FlipCard/>
+         ): (
+          <>
+          {flipData.map((card) => (
+            <FlipCard
+              className="card-between"
               key={card.id}
               resim={card.resim}
               title={card.title}
               content={card.content}
             />
           ))}
+          </>
+          
+
+         )}
           
         </div>
-        <div className="cards-container1">     
-          {flipData.filter((_, index) => [2, 3, 6, 7, 8].includes(index)).map((card) => (
-            <FlipCard className="card-between"
-              key={card.id}
-              resim={card.resim}
-              title={card.title}
-              content={card.content}
-            />
-          ))}
-        </div>
       </div>
-      <div  className="animasyonVideo">
+      <div className="animasyonVideo">
         <h1>Grandus B-One Nasil Hazirlanir ?</h1>
-        <video 
-          ref = {videoRef}
-          width="90%" 
-          height="auto" 
-          muted 
-          loop
-        >
-          <source src="/images/ornekVideo.mp4" type="video/mp4" />
+        <video ref={videoRef} width="90%" height="auto" muted loop controls>
+          <source src="/images/GRANDUSANİMSYONR1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-    </div>
+      </div>
     </>
   );
 };
 
 export default HomePage;
-
-// Grandus basligi ve aciklamasi soldan gelecek
-// ikisi ayri divler olacak
-// sagdan urunun kisa aciklamasi olan sik bir kart gelecek

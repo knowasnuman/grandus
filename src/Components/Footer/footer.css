@@ -5,7 +5,7 @@
     margin-top: 30px;
     background-color: #525252;
     font-family: "Urbanist", serif;
-    padding: 30px 0 30px 0;
+    padding: 30px 0 ;
     background-image: url("./Adsız tasarım (5).png");
     background-position: 100%;
     color: #fff;
@@ -53,4 +53,54 @@
     width: 40%;
     font-size: 1.4em;
     
+}
+
+
+@media (max-width: 480px) {
+    .foot{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        
+    }
+    .logo-iletisim{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        width: 100%;
+    }
+    .B-One_Nedir{
+        display: none;
+    }
+    .logo{
+        width: 100%;
+        
+    }
+    
+    .contact-footer{
+        width: 100%;
+        padding: 20px 0 0 0;
+        margin-bottom: 10px;
+        text-align: center;
+        
+    }
+    .a1{
+        font-size: 1.2em;
+        width: 100%;
+    }
+    .b1{
+        font-style: italic;
+        font-size: 1em;
+        color: #fff;
+        width: 100%;
+    }
+    .social_logo{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        font-size: 1.4em;
+        
+    }
 }

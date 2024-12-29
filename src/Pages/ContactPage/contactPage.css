@@ -8,7 +8,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
     background-color: #eeeeee;
 }
 .mail_gonder{
@@ -109,4 +108,239 @@ button{
 .box3:hover{
     background-color: #d40000;
     color: #fff;
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    .ulas{
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .mail_gonder{
+        
+        width: 90%;
+       
+    }
+    
+    .full_name{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .first_name{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        width: 50%;
+    }
+    .last_name{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    .mesaj{
+        height: 40px;
+        padding: 10px;
+    }
+    .mail{
+        padding: 10px;
+    }
+    label{
+        font-family: "Urbanist", serif;
+    }
+    button{
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 1.3em;
+        letter-spacing: 3px;
+        background-color: #d40000;
+        color: #fff;
+        border: none;
+    }
+    .iletisim_box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        aspect-ratio: 4;
+        font-family: "Roboto", sans-serif;
+        width: 90%;
+    }
+    
+    .content_icons{
+        font-size: 3em;
+    }
+    
+    .box1{
+        width: 33%;
+        background-color: #eeeeee;
+        padding: 10px 2px;
+        font-size: 0.7em;
+        border-left: 1px solid #d40000;
+        border-right: none;
+        border-bottom: 1px solid #d40000;
+        border-top: 1px solid #d40000;
+    }
+    .box2{
+        width: 33%;
+        background-color: #eeeeee;
+        padding: 10px 2px;
+        font-size: 0.7em;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #d40000;
+        border-top: 1px solid #d40000;
+       
+    }
+    .box3{
+        width: 33%;
+        background-color: #eeeeee;
+        padding: 10px 2px;
+        font-size: 0.7em;
+        border-left: none;
+        border-right: 1px solid #d40000;
+        border-bottom: 1px solid #d40000;
+        border-top: 1px solid #d40000;
+        
+    }
+ 
+    .content_icons{
+        font-size: 1.8em;
+    }
+   
+}
+
+
+@media (max-width: 480px) {
+    
+    .ulas{
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .mail_gonder{
+        
+        width: 90%;
+       
+    }
+    
+    .full_name{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .first_name{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        width: 50%;
+    }
+    .last_name{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    .mesaj{
+        height: 40px;
+        padding: 10px;
+    }
+    .mail{
+        padding: 10px;
+    }
+    label{
+        font-family: "Urbanist", serif;
+    }
+    button{
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 1.3em;
+        letter-spacing: 3px;
+        background-color: #d40000;
+        color: #fff;
+        border: none;
+    }
+    .iletisim_box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        aspect-ratio: 4;
+        font-family: "Roboto", sans-serif;
+        width: 90%;
+    }
+    
+    .content_icons{
+        font-size: 3em;
+    }
+    
+    .box1{
+        width: 33%;
+        background-color: #eeeeee;
+        padding: 10px 2px;
+        font-size: 0.7em;
+        border-left: 1px solid #d40000;
+        border-right: none;
+        border-bottom: 1px solid #d40000;
+        border-top: 1px solid #d40000;
+    }
+    .box2{
+        width: 33%;
+        background-color: #eeeeee;
+        padding: 10px 2px;
+        font-size: 0.7em;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #d40000;
+        border-top: 1px solid #d40000;
+       
+    }
+    .box3{
+        width: 33%;
+        background-color: #eeeeee;
+        padding: 10px 2px;
+        font-size: 0.7em;
+        border-left: none;
+        border-right: 1px solid #d40000;
+        border-bottom: 1px solid #d40000;
+        border-top: 1px solid #d40000;
+        
+    }
+    .box1:hover{
+        background-color: #d40000;
+        color: #fff;
+    }
+    .box2:hover{
+        background-color: #d40000;
+        color: #fff;
+    }
+    .box3:hover{
+        background-color: #d40000;
+        color: #fff;
+    }
+    .content_icons{
+        font-size: 1.8em;
+    }
+   
 }

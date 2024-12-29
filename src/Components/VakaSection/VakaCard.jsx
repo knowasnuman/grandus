@@ -1,33 +1,29 @@
+import "./vakaCard.css";
 
-import './vakaCard.css'
-
-import React from 'react';
-import OrnekResim from './idaretenResim.jpg'
-import OrnekResim1 from './idaretenResim1.jpg'
-const VakaCard = ({anaBaslik,altBaslik,description}) => {
-  const BASE_URL = 'http://localhost:8000'; // Django backend URL'si
+import React from "react";
+import OrnekResim from "./idaretenResim.jpg";
+import OrnekResim1 from "./idaretenResim1.jpg";
+const VakaCard = () => {
   return (
     <>
-        
-          <div className="vContainer">
-            <h1 className='anaB'>{anaBaslik}</h1>
-            <section className="vakaContainer">
-              <div className="image">
-                <img src={OrnekResim} alt="" />
-                <img src={OrnekResim1} alt="" />
-                <img src={OrnekResim1} alt="" />
-              </div>
-              <div className="icerik">
-                <h1 className="vakaBaslik">{altBaslik}</h1>
-                <p className="vakaIcerik">
-                  {description}
-                </p>
-              </div>
-            </section>
+      <div className="vContainer">
+        <section className="vakaContainer">
+          <h1 className="anaB">Musterimiz "Numan Taha Kotan" grandus tedavisinden sonra sunlari soyledi</h1>
+          <div className="icerik">
+            <p className="vakaIcerik">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+              at, labore odit culpa iure perspiciatis error nam corrupti vitae?
+              Repudiandae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, deserunt, eligendi illo molestias non ad 
+              repellat harum nostrum amet voluptatum nam, doloremque soluta exercitationem facere maiores quaerat error! Eaque, deleniti.
+            </p>
           </div>
-        
+        </section>
+        <div className="image">
+            <img src={OrnekResim} alt="" />
+          </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default VakaCard
+export default VakaCard;

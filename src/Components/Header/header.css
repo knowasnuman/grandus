@@ -9,15 +9,15 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin:0 auto;
+    margin:0 auto; 
     background-color: #fff;
     width: 100%;
-    padding: 30px 0 30px 0;
+    padding: 20px 0 20px 0;
 
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
 
@@ -31,7 +31,7 @@ body{
     font-family: "Sora", sans-serif;
     font-weight: 400;
     
-    margin-left: 40px;
+    
 }
 .markaIsmi h1{
     background: linear-gradient(
@@ -83,20 +83,8 @@ body{
     padding-bottom: 12px;
 }
 
-.navbarMenu .myLinkIletisim{
-    text-decoration: none;
-    color: #000000;
-    font-family: "Siginka Negative", sans-serif;
-    font-weight: 650;
-    font-size: 1.2em;
-    padding: 12px 25px 12px 25px;
-    
-}
 
 .myLink.activeLink{
-    text-decoration: underline;
-}
-.myLinkIletisim.activeLink{
     text-decoration: underline;
 }
 
@@ -121,4 +109,131 @@ body{
     pointer-events: none;
     transform: translateY(-100%); /* Yukarı kaybolur */
     transition: 0.3s ease-out;
+}
+
+
+.markaIsmiMobil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #000000;
+    font-family: "Sora", sans-serif;
+    font-weight: 400;
+    
+    background: linear-gradient(
+        to left, 
+        #000000   0%,        /* Ortada hafif beyaz */
+        #d40000 100%         /* Yanlara doğru şeffaf */
+    );
+    -webkit-background-clip: text; /* Gradyanı sadece metin içinde uygula */
+    -webkit-text-fill-color: transparent;
+}
+.mobil_ikon{
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+.mobiliz{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+}
+
+.hamburger {
+    display: flex;
+    font-size: 1rem;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-links-mobile {
+    position: sticky;
+    
+    width: 100%;
+    
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .myLink_Mobile{
+    text-decoration: none;
+    color: #d40000;
+    font-family: "Siginka Negative", sans-serif;
+    font-weight: 650;
+    font-size: 0.8em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .nav-links-mobile a:hover {
+    color: #00bcd4;
+  }
+  @media (max-width: 1440px) {
+    .headerContainer{
+        padding: 0;
+        font-size: 0.7em;
+        
+    }  
+    .navbarMenu {
+        font-size: 1.2em;
+    } 
+  }
+  /* Mobil Görünüm için */
+  @media (max-width: 768px) {
+    .headerContainer{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.7em;
+        padding: 0;
+        margin: 0 auto;
+    }  
+    .markaIsmi{
+        width: 100%;
+    } 
+    .navbarMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px 0;
+        width: 100%;
+        font-size: 1.3em;
+        
+    } 
+    
+  }
+
+@media (max-width: 480px) {
+    body{
+        width: 100%;
+    }
+    .headerContainer{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.7em;
+        padding: 0;
+        margin: 0 auto;
+    }  
+    .markaIsmi{
+        width: 100%;
+    } 
+    .navbarMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px 0;
+        width: 100%;
+        font-size: 1.3em;
+        
+    } 
+   
 }

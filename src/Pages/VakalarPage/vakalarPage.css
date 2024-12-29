@@ -1,0 +1,65 @@
+.vakalar_container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .vakalar_container > img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+  
+  }
+  
+  /* Gradyan ve blur efekti için overlay ekliyoruz */
+  .blurred-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(212, 0, 0, 0.7), rgba(255, 255, 255, 0));  /* Gradyan: sol daha koyu, sağ daha açık */
+    filter: blur(10px);  /* Bulanıklık efekti */
+    z-index: 1;  /* Overlay'i görselin önüne yerleştiriyoruz */
+    transition: filter 0.3s ease-out;  /* Hover geçişi için animasyon */
+  }
+  
+  /* Hover durumunda bulanıklık kaybolur */
+  .vakalar_container:hover .blurred-overlay {
+    filter: blur(0px);
+  }
+  
+  .vakalar_title {
+    position: absolute;
+    top: 24%;
+    left: 10%;
+    width: 40%;
+    z-index: 2; /* Başlık görselin önünde olacak şekilde z-index */
+    font-family: "Urbanist", serif;
+    color: white;
+  }
+  
+  .vakalar_title h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .vakalar_title p {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  
+  @media (max-width:768px) {
+    .vakalar_title {
+      object-fit: contain;
+      width: 90%;
+      font-size: 0.6em;
+    }
+  }
+  @media (max-width:1024px) {
+    .vakalar_title {
+      object-fit: contain;
+      width: 90%;
+      font-size: 0.6em;
+    }
+  }
