@@ -115,7 +115,7 @@ const Header = () => {
             <h1>Grandus B-One</h1>
             <div className="contact">
               <p>Bize Ulaşın</p>
-              <h4>0555 555 55 55</h4>
+              <h4>0442 233 91 38</h4>
             </div>
           </div>
           <div className="navbarMenu">

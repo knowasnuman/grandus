@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./homePage.css";
 import flipData from "./data.json";
-import AnaResim from "./Grandus B-One (2).png";
-import { FaAngleDown } from "react-icons/fa";
-import igne from "../../Assets/igne111.jpg";
-import solIgne from "../../Assets/igneSagaBakan.png";
-import ilacKutusu from "../../Assets/ilacKutusu.jpg";
+import AnaResim from "../../Seminerler/somu.jpg";
+
+import igne from "../../Seminerler/homeilk.png";
+
+import ilacKutusu from "../../Assets/qqer.png";
 import FlipCard from "../../Components/overlay/FlipCard";
-import DuyuruBox from "../../Components/duyuruBox/DuyuruBox";
+
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,17 +37,27 @@ const HomePage = () => {
     };
   }, []);
   const videoRef = useRef(null);
-  const [isVideoVisible, setIsVideoVisible] = useState(false);
+  
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVideoVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.5, // Video ekrana %50 görünür olduğunda tetiklenir.
-      }
-    );
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Video %50 görünür olduğunda tetiklenecek
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Video görünür olduğunda
+          videoRef.current.play();
+        } else {
+          // Video görünmez olduğunda
+          videoRef.current.pause();
+          videoRef.current.currentTime = 0; // Videoyu başa sar
+        }
+      });
+    }, options);
 
     if (videoRef.current) {
       observer.observe(videoRef.current);
@@ -59,13 +69,6 @@ const HomePage = () => {
       }
     };
   }, []);
-  useEffect(() => {
-    if (isVideoVisible) {
-      videoRef.current.play(); // Video görünür olduğunda oynatılır.
-    } else {
-      videoRef.current.pause(); // Video görünürlüğü kaybolunca durdurulur.
-    }
-  }, [isVideoVisible]);
   const [isFlipMobile, setIsFlipMobile] = useState(false);
 
 
@@ -88,9 +91,9 @@ const HomePage = () => {
           <h1>Grandus B-One </h1>
           <h1>Nedir?</h1>
           <p>
-            B-one, tetra kalsiyum fosfat icerikli kemigi kemige, kemigi metale
-            10dk kadar kisa bi surede yapistiran ve bunu tamamen yerini kemige
-            yani otojene birakana kadar bu mukavementini kaybetmeyen bir
+            B-one, tetra kalsiyum fosfat içerikli kemiği kemiğe, kemiği metale
+            10 dakika kadar kısa bi sürede yapıştıran ve bunu tamamen yerini kemiğe
+            yani otojene bırakana kadar bu mukavementini kaybetmeyen bir
             (kalsiyum fosfat cimento) sentetik kemiktir.
           </p>
         </div>
@@ -102,25 +105,16 @@ const HomePage = () => {
             <img src={igne} alt="" />
           </div>
           <div className="sectionDescription">
-            <h1>Grandus B-One Ne Ise Yarar</h1>
+            <h1>Grandus B-One Ne İşe Yarar</h1>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et totam
-              obcaecati rem tenetur blanditiis. Minus tenetur quaerat maxime
-              similique architecto iste quasi asperiores sequi qui eligendi
-              natus, voluptatum, dicta soluta vel accusamus veniam rerum ipsa
-              aspernatur cupiditate nemo atque debitis!
+              B-ONE, tetra kalsiyum fosfat içerikli yenilikçi bir kemik yapıştırıcısıdır. Kemiği kemiğe ve metali kemiğe sadece 10 dakika gibi kısa bir sürede yapıştırabilme özelliğine sahiptir. Donarak osteokondüktif bir çatı oluşturur ve bu çatı tamamen yerini otojene bırakana kadar mukavemetini korur.
             </p>
             <p className="num">
-              <strong>01.</strong> Soyle yapar
+              <strong>01.</strong> Binlerce tutucu ayak oluşturarak kemik ve metalle hızlıca yapışır, fail implantları bile 10 dakikada immediate yükleme imkanı sağlar.
             </p>
+            
             <p className="num">
-              <strong>02.</strong> Soyle boyle ve boyle yapar
-            </p>
-            <p className="num">
-              <strong>03.</strong> Hazirlanmasi cok kisa ve cok etkili
-            </p>
-            <p className="num">
-              <strong>04.</strong> Yeni bir teknoloji kullanir
+              <strong>02.</strong> Ağız ve çene cerrahisi, ortopedi ve travmatoloji, beyin cerrahisi, veterinerlik, kulak burun boğaz ve plastik cerrahi gibi birçok alanda kullanılabilir.
             </p>
           </div>
         </div>
@@ -150,8 +144,16 @@ const HomePage = () => {
       </div>
       <div className="animasyonVideo">
         <h1>Grandus B-One Nasil Hazirlanir ?</h1>
-        <video ref={videoRef} width="90%" height="auto" muted loop controls>
-          <source src="/images/GRANDUSANİMSYONR1.mp4" type="video/mp4" />
+        <video 
+          ref={videoRef}
+          width="90%" 
+          height="auto"
+          loop
+          muted // Otomatik oynatma için sessize alınmalı
+          playsInline // iOS için gerekli
+          controls
+        >
+          <source src="/images/SonVideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

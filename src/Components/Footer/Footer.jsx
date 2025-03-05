@@ -1,7 +1,8 @@
 import React from 'react'
- 
 import './footer.css'
 import { SlSocialInstagram } from "react-icons/sl";
+import { IoMailOutline, IoCallOutline } from "react-icons/io5";
+
 const Footer = () => {
   return (
     <div className='foot'>
@@ -19,13 +20,25 @@ const Footer = () => {
             <h1>GRANDUS</h1>
         </div>
         <div className="contact-footer">
-            <h1 className='a1'>Bizimle Iletisime Gecin</h1>
-            <p className='b1'>0506 800 35 25</p>
-            <p className='b1'>forexampl@gmail.com</p>
+            <h1 className='a1'>Bizimle İletişime Geçin</h1>
+            <p className='b1'>
+              <IoCallOutline style={{marginRight: "10px", textAlign: "center"}}/>
+              0442 233 91 38
+            </p>
+            <p className='b1'>
+              <IoMailOutline style={{marginRight: "10px", textAlign: "center"}}/>
+              doguanadoludis@hotmail.com
+            </p>
             <div className="social_logo">
-              <SlSocialInstagram/>
-              <SlSocialInstagram/>
-              <SlSocialInstagram/>
+              <a 
+                href="https://www.instagram.com/doguanadoludis?igsh=MWhhNG54OHE1cGkxdA==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="instagram-link"
+              >
+                <SlSocialInstagram style={{marginRight: "10px", textAlign: "center"}}/>
+                <span>doguanadoludis</span>
+              </a>
             </div>
         </div>
       </div>

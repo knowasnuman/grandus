@@ -1,0 +1,244 @@
+.seminerPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #eeeeee;
+  padding: 10px 30px;
+  box-shadow: 10px  rgba(0, 0, 0, 0.1);
+}
+.seminerPage-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  width: 50%;
+}
+
+.duyuruYonlendirContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #d40000;
+  margin: 0;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  
+}
+.hhh{
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.duyuruYonlendirLink{
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #d40000;
+  padding: 10px 30px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  
+}
+.anaTitle{
+  margin: auto;
+  font-size: 2rem;
+  font-weight: 600;
+ text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  color: #d40000;
+}
+.seminerPage-title h1{
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  color: #d40000;
+
+}
+.seminerPage-title h3{
+  
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  color: #d40000;
+
+}
+.seminerPage-title p{
+  
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  color: #292929;
+
+}
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.thumbnail.active,
+.thumbnail:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .duyuruYonlendirLink {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .duyuruYonlendirContainer p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .seminerPage {
+    width: 90%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .seminerPage-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .seminerPage-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .slideshow-container {
+    width: 100%;
+  }
+
+  .slide img {
+    height: 200px;
+  }
+
+  .thumbnails {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .thumbnail {
+    width: 40px;
+    height: 30px;
+    margin: 2px;
+  }
+
+  .prev,
+  .next {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .anaTitle {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+}
+
+/* Daha küçük mobil cihazlar için ek düzenlemeler */
+@media screen and (max-width: 480px) {
+  .duyuruYonlendirLink {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .seminerPage-title h1 {
+    font-size: 1.2rem;
+  }
+
+  .seminerPage-title h3 {
+    font-size: 1rem;
+  }
+
+  .seminerPage-title p {
+    font-size: 0.9rem;
+  }
+
+  .slide img {
+    height: 150px;
+  }
+
+  .thumbnails {
+    justify-content: center;
+  }
+
+  .thumbnail {
+    width: 35px;
+    height: 25px;
+  }
+}

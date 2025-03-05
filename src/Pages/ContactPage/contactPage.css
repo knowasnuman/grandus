@@ -17,7 +17,7 @@
    
 }
 .mail_gonder input[type="text"],
-input[type="email"]{
+input[type="email"], textarea{
     margin: 10px 0 10px 0;
     border: 2px solid #d40000;
     border-radius: 4px;
@@ -230,6 +230,7 @@ button{
         width: 100%;
         height: auto;
         margin: 0px auto;
+        margin-top: 100px;
         padding-top: 10px;
         display: flex;
         flex-direction: column;
@@ -289,6 +290,7 @@ button{
         aspect-ratio: 4;
         font-family: "Roboto", sans-serif;
         width: 90%;
+        margin-top: 10px;
     }
     
     .content_icons{
