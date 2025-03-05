@@ -12,8 +12,8 @@ const ContactPage = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_kvtxay7", "template_8w5y7et", form.current, {
-        publicKey: "NjJZtS-pXz4Ovyqw6",
+      .sendForm( process.env.CONTACT_EMAILJS_SERVICEKEY, process.env.CONTACT_EMAILJS_TEMPLATEKEY, form.current, {
+        publicKey: process.env.CONTACT_EMAILJS_PUBLICKEY,
       })
       .then(
         () => {
